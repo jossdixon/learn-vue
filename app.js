@@ -1,5 +1,13 @@
 const app = Vue.createApp({
-  template: '<h1>Hello World</h1>'
+  data() {
+    return {
+      firstName: 'Boy',
+      lastName: 'Wonder',
+      email: 'boy@wonder.com',
+      gender: 'male',
+      picture: 'https://randomuser.me/api/robin',
+    }
+  },
 })
 
 app.mount('#app')
