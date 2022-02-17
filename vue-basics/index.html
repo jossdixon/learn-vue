@@ -14,17 +14,19 @@
     <div v-if="showBooks">
       <ul>
         <li v-for="book in books">
+          <img src="" alt="">
           <h3>{{book.title}}</h3>
           <p>{{book.author}}</p>
         </li>
       </ul>
     </div>
+
+    <button @click="toggleShowBooks">
+      <span v-if="showBooks">Hide Books</span>
+      <span v-else>Show Books</span>
+    </button>
   </div>
 
-  <button @click="toggleShowBooks">
-    <span v-if="showBooks">Hide Books</span>
-    <span v-else>Show Books</span>
-  </button>
 
   <script src="app.js"></script>
 </body>

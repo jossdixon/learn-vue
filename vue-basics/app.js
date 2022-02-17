@@ -12,8 +12,9 @@ const app = Vue.createApp({
   methods: {
     toggleShowBooks() {
       this.showBooks = !this.showBooks
-    }
+    },
+
   }
 })
 
-app.mount(#app)
+app.mount('#app')
