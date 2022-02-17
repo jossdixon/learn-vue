@@ -3,9 +3,9 @@ const app = Vue.createApp({
     return {
       showBooks: true,
       books: [
-        { title: 'I Am A Cat', author: 'Natsume Soseki' },
-        { title: 'Things Fall Apart', author: 'Chinua Achebe' },
-        { title: 'We, The Drowned', author: 'Carsten Jensen' },
+        { title: 'I Am A Cat', author: 'Natsume Soseki', img: 'assets/iamacat.jpeg', isFav: true },
+        { title: 'Things Fall Apart', author: 'Chinua Achebe', img: 'assets/thingsfallapart.jpeg', isFav: false },
+        { title: 'We, The Drowned', author: 'Carsten Jensen', img: 'assets/wethedrowned.jpeg', isFav: false },
       ]
     }
   },
@@ -13,7 +13,10 @@ const app = Vue.createApp({
     toggleShowBooks() {
       this.showBooks = !this.showBooks
     },
-
+    toggleFav(book) {
+      console.log(book.isFav)
+      book.isFav = !book.isFav
+    }
   }
 })
 
