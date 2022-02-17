@@ -1,21 +1,30 @@
 <template>
   <h1>{{ title }}</h1>
-  <input type="text" ref="name">
-  <button @click="handleClick">Click Me!</button>
+  <div v-if="showModal">
+    <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />
+  </div>
+  <div>
+    <button @click="toggleModal">Click Me!</button>
+  </div>
 </template>
 
 <script>
+import Modal from './components/Modal.vue'
 
 export default {
   name: 'App',
+  components: { Modal },
   data() {
     return {
-      title: "Let's Vue This"
+      title: "Let's Vue This",
+      header: "The Big Text",
+      text: "The much smaller text",
+      showModal: false
     }
   },
   methods: {
-    handleClick() {
-
+    toggleModal() {
+      this.showModal = !this.showModal
     }
   }
 }
