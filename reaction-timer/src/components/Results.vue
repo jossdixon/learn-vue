@@ -1,6 +1,6 @@
 <template>
   <h2>Your score is {{score}} ms.</h2>
-  <h3>You have the speed of {{rank}}</h3>
+  <h3>You are {{rank}}</h3>
 </template>
 
 <script>
@@ -13,11 +13,11 @@ export default {
   },
   mounted() {
     if (this.score < 250) {
-      this.rank = "a demon's whisper."
+      this.rank = "the good."
     } else if (this.score < 400) {
-      this.rank = 'an able seaman.'
+      this.rank = 'the bad.'
     } else {
-      this.rank = 'the most sluggish buffoon.'
+      this.rank = 'the ugly.'
     }
   }
 }

@@ -38,10 +38,13 @@ export default {
   .block {
     width: 400px;
     border-radius: 50px;
-    background: darkgoldenrod;
+    background: firebrick;
     color: whitesmoke;
     text-align: center;
     padding: 100px 0;
     margin: 40px auto;
+    font-family: "Brygada 1918";
+    font-size: 48px;
+    font-style: normal;
   }
 </style>
