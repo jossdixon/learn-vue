@@ -40,6 +40,8 @@ export default {
 body {
   background-image: url('https://wallpapercave.com/wp/wp4639116.png');
   background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 #app {
   font-family: 'Brygada 1918', 'Times New Roman', Times, serif;
